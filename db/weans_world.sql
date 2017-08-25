@@ -6,7 +6,7 @@ CREATE TABLE animals
 (
   id SERIAL8 primary key,
   species VARCHAR(255),
-  adoption_month DATE,
+  adoption_month VARCHAR(255),
   adoptable BOOLEAN
 );
 

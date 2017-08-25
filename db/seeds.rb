@@ -39,9 +39,12 @@ animal3 = Animal.new({
   'adoptable' => 'false'
 })
 animal3.save
-binding.pry
+
 adoption1 = Adoption.new({
   'animal_id' => animal1.id,
   'hero_id' => hero1.id
 })
 adoption1.save()
+
+binding.pry
+nil
