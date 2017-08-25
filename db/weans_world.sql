@@ -15,5 +15,14 @@ CREATE TABLE heros
 (
   id SERIAL8 primary key,
   name VARCHAR(255),
-  
+
+)
+
+CREATE TABLE adoptions
+(
+  id SERIAL8 primary key,
+animal_id INT8 references animals(id),
+hero_id INT8 references heros(id)
+
+
 )
