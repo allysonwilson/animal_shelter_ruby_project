@@ -1,3 +1,5 @@
+require_relative( '../db/sql_runner' )
+
 class Hero
 
 attr_reader( :id , :name )
@@ -8,7 +10,7 @@ attr_reader( :id , :name )
   end
 
   def save()
-      sql = "INSERT INTO heros
+      sql = "INSERT INTO heroes
       (
         name
 
@@ -24,14 +26,14 @@ attr_reader( :id , :name )
     end
 
     def self.all()
-      sql = "SELECT * FROM heros"
+      sql = "SELECT * FROM heroes"
       values = []
       results = SqlRunner.run( sql, values )
       return results.map { |hash| Hero.new( hash ) }
     end
 
     def self.find( id )
-      sql = "SELECT * FROM heros
+      sql = "SELECT * FROM heroes
       WHERE id = $1"
       values = [id]
       results = SqlRunner.run( sql, values )
@@ -39,7 +41,7 @@ attr_reader( :id , :name )
     end
 
     def self.delete_all
-      sql = "DELETE FROM heros"
+      sql = "DELETE FROM heroes"
       values = []
       SqlRunner.run( sql, values )
     end

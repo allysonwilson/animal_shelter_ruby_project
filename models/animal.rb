@@ -7,7 +7,7 @@ class Animal
 def initialize( options )
   @id = options['id'].to_i if options['id']
   @species = options['species']
-  @adoption_month = options['adoption_month'] #date or integer
+  @adoption_month = options['adoption_month'] 
   @adoptable =  options['adoptable'] #boolean
 end
 
