@@ -6,23 +6,22 @@ class Animal
 
 def initialize( options )
   @id = options['id'].to_i if options['id']
-  @species = options['name']
-  @adoption_month = options['type'] #date or integer
+  @species = options['species']
+  @adoption_month = options['adoption_month'] #date or integer
   @adoptable =  options['adoptable'] #boolean
 end
 
 def save()
   sql = "INSERT INTO animals
   (
-    name,
-    run_speed
+    species, adoption_month, adoptable
   )
   VALUES
   (
-    $1, $2
+    $1 , $2, $3
   )
-  RETURNING id"
-  values = [@name, @run_speed]
+  RETURNING id "
+  values = [ @species, @adoption_month, @adoptable ]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
 end

@@ -1,25 +1,26 @@
 class Hero
 
+attr_reader( :id , :name )
   def initialize( options )
       @id = options['id'].to_i if options
       @name =  options['name']
-      
+
   end
 
   def save()
       sql = "INSERT INTO heros
       (
-        name,
+        name
 
       )
       VALUES
       (
-        $1, $2
+        $1
       )
       RETURNING id"
-      values = [@name, @type]
+      values = [ @name ]
       results = SqlRunner.run(sql, values)
-      @id = results.first()['id'].to_i
+      @id = results.first()[ 'id' ].to_i
     end
 
     def self.all()

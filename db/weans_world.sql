@@ -5,7 +5,6 @@ DROP TABLE IF EXISTS animals;
 CREATE TABLE animals
 (
   id SERIAL8 primary key,
-  name VARCHAR(255) not null,
   species VARCHAR(255),
   adoption_month DATE,
   adoptable BOOLEAN
@@ -14,15 +13,12 @@ CREATE TABLE animals
 CREATE TABLE heros
 (
   id SERIAL8 primary key,
-  name VARCHAR(255),
-
-)
+  name VARCHAR(255)
+);
 
 CREATE TABLE adoptions
 (
   id SERIAL8 primary key,
 animal_id INT8 references animals(id),
 hero_id INT8 references heros(id)
-
-
-)
+);
