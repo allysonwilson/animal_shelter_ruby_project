@@ -61,5 +61,27 @@ def save()
     SqlRunner.run( sql, values )
   end
 
+  def update()
+    sql = "UPDATE adoptions
+    SET
+    (
+    hero_id,
+    animal_id
+    )=
+    (
+      $1, $2
+    )
+    WHERE id = $3"
+    values = [@hero_id, @animal_id]
+    SqlRunner.run(sql, values)
+  end
 
+  def self.find(id)
+    sql = "SELECT * FROM adoptions
+    WHERE ID = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    adoption = Adoption.new(result)
+    return adoption
+  end
 end
