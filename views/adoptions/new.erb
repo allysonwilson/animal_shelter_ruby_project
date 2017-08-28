@@ -1,0 +1,25 @@
+<h1>Make New Animal Friends</h1>
+
+<form class="/adoptions" method="post">
+  <label>
+    Select a hero:
+    <select name="hero_id">
+      <% for hero in @heroes %>
+      <option value="<%= hero.id %>">
+        <%= hero.name %> </option>
+        <% end %>
+    </select>
+  </label>
+
+<label>
+  Select an Animal:
+  <select name="animal_id">
+    <% for animal in @animals %>
+    <option value="animal.id ">
+    <%= animal.species %></option>
+    <% end %>
+  </select>
+</label>
+
+<input class= "btn btn--action" type='submit' value="Adopt!">
+</form>

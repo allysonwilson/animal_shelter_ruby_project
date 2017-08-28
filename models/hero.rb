@@ -11,14 +11,9 @@ attr_reader( :id , :name )
 
   def save()
       sql = "INSERT INTO heroes
-      (
-        name
-
-      )
+      (name)
       VALUES
-      (
-        $1
-      )
+      ($1)
       RETURNING id"
       values = [ @name ]
       results = SqlRunner.run(sql, values)

@@ -19,6 +19,6 @@ CREATE TABLE heroes
 CREATE TABLE adoptions
 (
   id SERIAL8 primary key,
-animal_id INT8 references animals(id),
-hero_id INT8 references heroes(id)
+animal_id INT8 references animals(id) ON DELETE CASCADE,
+hero_id INT8 references heroes(id) ON DELETE CASCADE
 );

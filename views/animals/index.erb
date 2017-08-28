@@ -1,0 +1,12 @@
+<h1>Animals</h1>
+<% for animal in @animals %>
+<p> <%= animal.species  %></p>
+<p> <%= animal.adoption_month %></p>
+<p><%= animal.adoptable %></p>
+<% end %>
+
+
+<!-- Need Adoption button -->
+<form  action="/adoptions/new" method="post">
+<input type="submit"  value="Adopt">
+</form>

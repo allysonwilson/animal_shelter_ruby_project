@@ -41,7 +41,7 @@ def save()
   end
 
   def hero()
-    sql = "SELECT * FROM heros
+    sql = "SELECT * FROM heroes
     WHERE id = $1"
     values = [@hero_id]
     results = SqlRunner.run( sql, values )
