@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Wean's World</title>
-    <link rel="stylesheet" href="/styles/style.css">
-  </head>
-  <body>
-      <h1>Wean's World</h1>
+<head>
+  <link rel="icon" href="/images/red_squirrel.png" />
+
+  <meta charset="utf-8">
+  <title>Wean's World</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <main class="flex--row">
+    <nav class="navigation">
+      <ul>
+        <li>
+          <a href="/heroes">Heroes</a>
+        </li>
+        <li>
+          <a href="/animals">Animals</a>
+        </li>
+        <li><a href="/adoptions">Adoptions</a></li>
+      </ul>
+    </nav>
+
+
+    <h1>Wean's World</h1>
 
     <div class="banner">
 
     </div>
-
-
-
+    <section id="content">
       <%= yield %>
-  </body>
+    </section>
+
+  </main>
+</body>
 </html>

@@ -1,6 +1,7 @@
 body {
   background: #085718;
   font-family: georgia;
+  color: white;
 }
 
 body h1 {
@@ -13,4 +14,9 @@ body h1 {
   height: 400px;
   background-position: center;
   margin:auto;
+}
+
+.navigation {
+  display: inline;
+  background-position: center;
 }
