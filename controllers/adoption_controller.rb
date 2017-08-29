@@ -10,11 +10,6 @@ get '/adoptions' do
   erb (:"adoptions/index")
 end
 
-get '/adoptions/:id' do
-  @adoption = Adoption.find_by_id(params[:id])
-  erb(:"adoptions/show")
-end
-
 get '/adoptions/new' do
   @adoptions = Adoption.all
   @heroes = Hero.all
@@ -22,10 +17,9 @@ get '/adoptions/new' do
   erb(:"adoptions/new")
 end
 
-post '/adoptions' do
-  @animals = Animal.all()
-  @heroes = Hero.all()
-  erb(:"adoptions/new")
+get '/adoptions/:id' do
+  @adoption = Adoption.find_by_id(params[:id])
+  erb(:"adoptions/show")
 end
 
 post '/adoptions/:id' do

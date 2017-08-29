@@ -2,11 +2,10 @@
 <% for animal in @animals %>
 <p> <%= animal.species  %></p>
 <p> <%= animal.adoption_month %></p>
-<p><%= animal.adoptable %></p>
+<p><%= animal.adoptable ? "yes" : "no" %></p>
 <% end %>
 
 
 <!-- Need Adoption button -->
-<form  action="/adoptions/new" method="post">
-<input type="submit"  value="Adopt">
-</form>
+
+<a href="/adoptions/new">Adopt</a>

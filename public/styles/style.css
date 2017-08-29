@@ -1,1 +1,16 @@
- 
+body {
+  background: #085718;
+  font-family: georgia;
+}
+
+body h1 {
+  text-align: center;
+}
+
+.banner {
+  background-image: url('/images/forest.jpg');
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  margin:auto;
+}

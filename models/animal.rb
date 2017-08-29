@@ -8,7 +8,7 @@ def initialize( options )
   @id = options['id'].to_i if options['id']
   @species = options['species']
   @adoption_month = options['adoption_month']
-  @adoptable =  options['adoptable'] #boolean
+  @adoptable =  options['adoptable'] == "t"
 end
 
 def save()
