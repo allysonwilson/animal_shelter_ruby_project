@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="icon" href="/images/red_squirrel.png" />
 
   <meta charset="utf-8">
@@ -9,6 +10,14 @@
 </head>
 <body>
   <main class="flex--row">
+
+
+    <h1>Wean's World</h1>
+
+    <div class="banner">
+
+    </div>
+
     <nav class="navigation">
       <ul>
         <li>
@@ -17,20 +26,16 @@
         <li>
           <a href="/animals">Animals</a>
         </li>
-        <li><a href="/adoptions">Adoptions</a></li>
-      </ul>
-    </nav>
+        <li><a href="/adoptions">Adoptions</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="content">
+    <%= yield %>
+  </section>
 
 
-    <h1>Wean's World</h1>
-
-    <div class="banner">
-
-    </div>
-    <section id="content">
-      <%= yield %>
-    </section>
-
-  </main>
+</main>
 </body>
 </html>

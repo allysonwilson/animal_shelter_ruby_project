@@ -1,11 +1,29 @@
 <h1>Animals</h1>
-<% for animal in @animals %>
-<p> <%= animal.species  %></p>
-<p> <%= animal.adoption_month %></p>
-<p><%= animal.adoptable ? "yes" : "no" %></p>
-<% end %>
+
+<table class="animals-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Species</th>
+      <th>Adoption Month</th>
+      <th>Adoptable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for animal in @animals %>
+    <tr>
+      <td>
+        <img src="<%= animal.image %>" alt="">
+      </td>
+      <td><%= animal.species  %></td>
+      <td><%= animal.adoption_month %></td>
+      <td><%= animal.adoptable ? "yes" : "no" %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
 
 <!-- Need Adoption button -->
 
-<a href="/adoptions/new">Adopt</a>
+<a class="adopt_link" href="/adoptions/new">Adopt</a>

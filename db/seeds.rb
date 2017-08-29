@@ -20,7 +20,8 @@ hero3.save()
 animal1 = Animal.new({
 'species' => 'Basking Shark',
 'adoption_month' => 'August',
-'adoptable' => 'true'
+'adoptable' => 'true',
+'image' => '/images/basking_shark_cartoon.jpeg'
 })
 animal1.save()
 
@@ -28,7 +29,8 @@ animal1.save()
 animal2 = Animal.new({
   'species' => 'Golden Oriole',
   'adoption_month' => 'September',
-  'adoptable' => 'false'
+  'adoptable' => 'false',
+  'image' => '/images/golden_oriole.jpg'
 
 })
 animal2.save()
@@ -36,7 +38,8 @@ animal2.save()
 animal3 = Animal.new({
   'species' => 'Adder',
   'adoption_month' => 'July',
-  'adoptable' => 'false'
+  'adoptable' => 'false',
+  'image' => '/images/adder_drawing.jpeg'
 })
 animal3.save
 
