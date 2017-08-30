@@ -14,7 +14,8 @@ CREATE TABLE animals
 CREATE TABLE heroes
 (
   id SERIAL8 primary key,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  image VARCHAR(255)
 );
 
 CREATE TABLE adoptions

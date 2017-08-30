@@ -1,4 +1,16 @@
-<h1> Hi There Heroes!</h1>
-<% for hero in @heroes %>
-<p><%= hero.name %></p>
+<h1 class= "heading">Heroes</h1>
+
+<div class="hero-info">
+
+
+    <% for hero in @heroes %>
+
+  <div class="hero-info-cell">
+    <img class="heroes-image" src="<%= hero.image %>" alt="">
+
+    <p class= "hero-name">Name: <%= hero.name %></p>
+  </div>
+
 <% end  %>
+
+</div>

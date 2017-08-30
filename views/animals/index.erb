@@ -1,29 +1,21 @@
-<h1>Animals</h1>
+<h1 class= "heading">Animals</h1>
 
-<table class="animals-table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Species</th>
-      <th>Adoption Month</th>
-      <th>Adoptable</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="animal-info">
+
+
     <% for animal in @animals %>
-    <tr>
-      <td>
-        <img src="<%= animal.image %>" alt="">
-      </td>
-      <td><%= animal.species  %></td>
-      <td><%= animal.adoption_month %></td>
-      <td><%= animal.adoptable ? "yes" : "no" %></td>
-    </tr>
+
+  <div class="animal-info-cell">
+      <img class="animals-image" src="<%= animal.image %>" alt="">
+
+    <h2>Species:  <%= animal.species  %></h2>
+    <h2> Adoptable: <%= animal.adoptable ? "yes" : "no" %></h2>
+    <h2>Adoption Month: <%= animal.adoption_month %></h2>
+
+  </div>
     <% end %>
-  </tbody>
-</table>
 
+</div>
 
-<!-- Need Adoption button -->
 
 <a class="adopt_link" href="/adoptions/new">Adopt</a>

@@ -1,11 +1,15 @@
+
 body {
-  background: black;
+  background:  #eef5ee;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color:  #004d1a;
+  margin: 0px;
+  padding: 0px;
 }
 
 body h1 {
   text-align: center;
+
 }
 
 .banner {
@@ -14,6 +18,8 @@ body h1 {
   height: 300px;
   background-position: center;
   margin:auto;
+  margin-top: 0;
+  padding: 20px;
 }
 
 .navigation {
@@ -23,8 +29,10 @@ body h1 {
 
 .navigation ul {
   list-style: none;
-  padding: 10;
+  padding: 10px;
   display: flex;
+  margin: 0;
+  background: white;
 }
 
 .navigation ul li {
@@ -35,7 +43,12 @@ body h1 {
   display: block;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #004d1a;
+  text-decoration: none;
+}
+
+.navigation li a:hover {
+  background: #eee;
 }
 
 .navigation li a img {
@@ -47,6 +60,41 @@ body h1 {
   padding:10px;
 }
 
-.animals-table {
 
+.animals_image {
+  width: 30px;
+  height: auto;
+}
+
+.heading{
+  text-decoration: underline;
+  }
+
+.animal-info {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  max-width: 80%;
+}
+.animal-info-cell {
+  border: 1px solid green;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 15px;
+  padding: 20px;
+}
+.animals_image {
+  max-width: 100%;
+}
+
+.adoption-declaration h2{
+  text-align: center;
+}
+.heroes-image {
+  height: 140px;
+  width: auto;
+}
+
+.hero-info-cell {
+  padding: 30px;
 }

@@ -1,26 +1,35 @@
 require_relative( '../models/hero.rb' )
 require_relative( '../models/animal.rb' )
 require_relative( '../models/adoption.rb' )
-require('pry-byebug')
+
 
 Adoption.delete_all()
 Hero.delete_all()
 Animal.delete_all()
 
-hero1 = Hero.new({'name' => 'Ona'})
+hero1 = Hero.new({
+  'name' => 'Ona',
+  'image'=> '/images/Ona_avatar.png'
+  })
 hero1.save()
 
-hero2 = Hero.new({'name' => 'Granny'})
+hero2 = Hero.new({
+  'name' => 'Granny',
+  'image'=> '/images/Granny.png'
+  })
 hero2.save()
 
-hero3 = Hero.new({'name' => 'Joe'})
+hero3 = Hero.new({
+  'name' => 'Joe',
+  'image'=> '/images/Fraser_avatar.png'
+  })
 hero3.save()
 
 
 animal1 = Animal.new({
 'species' => 'Basking Shark',
 'adoption_month' => 'August',
-'adoptable' => 'true',
+'adoptable' => 't',
 'image' => '/images/basking_shark_cartoon.jpeg'
 })
 animal1.save()
@@ -29,17 +38,16 @@ animal1.save()
 animal2 = Animal.new({
   'species' => 'Golden Oriole',
   'adoption_month' => 'September',
-  'adoptable' => 'false',
-  'image' => '/images/golden_oriole.jpg'
-
+  'adoptable' => 'f',
+  'image' => '/images/goldfinch.jpg'
 })
 animal2.save()
 
 animal3 = Animal.new({
   'species' => 'Adder',
   'adoption_month' => 'July',
-  'adoptable' => 'false',
-  'image' => '/images/adder_drawing.jpeg'
+  'adoptable' => 'f',
+  'image' => '/images/adder.jpg'
 })
 animal3.save
 
@@ -48,6 +56,3 @@ adoption1 = Adoption.new({
   'hero_id' => hero1.id
 })
 adoption1.save()
-
-binding.pry
-nil

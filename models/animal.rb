@@ -2,22 +2,23 @@ require_relative( '../db/sql_runner' )
 
 class Animal
 
-  attr_reader( :species, :adoption_month, :adoptable, :id )
+  attr_reader( :species, :adoption_month, :adoptable, :image, :id )
 
 def initialize( options )
   @id = options['id'].to_i if options['id']
   @species = options['species']
   @adoption_month = options['adoption_month']
   @adoptable =  options['adoptable'] == "t"
+  @image = options['image']
 end
 
 def save()
   sql = "INSERT INTO animals
-  ( species, adoption_month, adoptable )
+  ( species, adoption_month, adoptable, image )
   VALUES
-   ($1 , $2, $3 )
+   ($1 , $2, $3 , $4)
   RETURNING id "
-  values = [ @species, @adoption_month, @adoptable ]
+  values = [ @species, @adoption_month, @adoptable, @image ]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
 end
