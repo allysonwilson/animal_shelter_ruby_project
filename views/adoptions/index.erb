@@ -1,9 +1,13 @@
 <h1 class= "heading">Adoptions</h1>
 
-  <div class="adoption-declaration">
+<div class="adoption-declaration">
 
     <% for adoption in @adoptions %>
 
-<h2 >Our Hero, <%= adoption.hero.name %> has adopted a <%= adoption.animal.species %>! </h2>
-<% end %>
+      <h2 >Our Hero, <%= adoption.hero.name %> has adopted a <%= adoption.animal.species %>! </h2>
+    <% end %>
+    <div class="adoptions-new">
+
+    <a href="adoptions/new"> Adopt an animal</a>
+      </div>
 </div>

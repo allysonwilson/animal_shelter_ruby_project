@@ -56,7 +56,7 @@ body h1 {
 }
 
 .adopt_link {
-  color: white;
+  color: #004d1a;
   padding:10px;
 }
 
@@ -89,6 +89,10 @@ body h1 {
 
 .adoption-declaration h2{
   text-align: center;
+}
+
+.adoptions-new {
+  color: #004d1a;
 }
 .heroes-image {
   height: 140px;
